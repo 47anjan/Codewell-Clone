@@ -1,0 +1,59 @@
+.challenges {
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+  margin-bottom: 60px;
+}
+
+.challenges-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  a {
+    text-decoration: underline;
+    color: $clr-light-dark;
+  }
+}
+
+.challenges-body {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+.challenges-box {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid $clr-grey;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: border 0.3s ease-in-out;
+  img {
+    border-radius: 5px;
+  }
+  &:hover {
+    border: 1px solid $clr-dark-blue;
+  }
+}
+
+.challenges-btn {
+  @extend %btn;
+  justify-content: center;
+}
+
+.challenges-info {
+  margin-top: 15px;
+  margin-bottom: 10px;
+  p {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+    @include for-tablate() {
+      -webkit-line-clamp: 2;
+    }
+  }
+}

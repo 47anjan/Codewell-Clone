@@ -1,0 +1,115 @@
+.header {
+  background-color: $clr-blue-light;
+  margin: 20px;
+  border-radius: 10px;
+  padding-top: 20px;
+  .container {
+    padding-inline: 20px;
+  }
+}
+
+.navbar {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  border-radius: 5px;
+  background-color: $clr-white;
+  box-shadow: 0 3px 24px #6c6c6c1c;
+  min-height: 80px;
+  padding-inline: 20px;
+  margin-bottom: 40px;
+}
+.mobile-menu {
+  display: none;
+  cursor: pointer;
+  img {
+    width: 30px;
+  }
+  @include for-tablate() {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+.logo {
+  width: 140px;
+  margin-inline: 16px;
+  cursor: pointer;
+}
+.navbox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @include for-tablate() {
+    display: none;
+  }
+}
+.nav-btn {
+  @extend %btn;
+}
+.nav-link {
+  color: $clr-dark;
+  font-weight: 500;
+  padding: 8px;
+}
+.nav-list {
+  display: flex;
+}
+
+.hero {
+  display: flex;
+
+  .left-col {
+    margin-inline: 15px;
+    flex: 1;
+  }
+  .right-col {
+    margin-inline: 15px;
+    flex: 1;
+    @include for-tablate() {
+      display: none;
+    }
+  }
+  .hero-title {
+    margin-top: 40px;
+  }
+  .hero-subtitle {
+    margin-top: 20px;
+    line-height: 1.8;
+  }
+  .hero-list-box {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  .hero-list {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    gap: 10px;
+    img {
+      width: 33px;
+    }
+  }
+  .hero-btn-box {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    .hero-btn {
+      @extend %btn;
+      @include for-mobile() {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+    .hero-btn-img {
+      width: 93px;
+      margin-bottom: 30px;
+      @include for-mobile() {
+        display: none;
+      }
+    }
+  }
+}

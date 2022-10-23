@@ -1,0 +1,61 @@
+body {
+  font-family: roboto, sans-serif;
+  background-color: $clr-white;
+  line-height: 1.5;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+%btn {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: $clr-white;
+  background-color: $clr-dark-blue;
+  display: flex;
+  padding: 20px;
+  border-radius: 5px;
+  max-height: 56px;
+  gap: 10px;
+  align-items: center;
+  transition: background-color 0.3s ease-in-out;
+  cursor: pointer;
+  img {
+    width: 24px;
+  }
+  &:hover {
+    background-color: $clr-dark;
+  }
+}
+
+.container {
+  max-width: 1100px;
+  margin-inline: auto;
+  padding-inline: 0.9375rem;
+  @include for-tablate() {
+    max-width: 768px;
+  }
+}
+
+h1 {
+  font-size: 2.625rem;
+  @include for-tablate() {
+    font-size: 1.8rem;
+  }
+  line-height: 1.21;
+}
+h2 {
+  font-size: 1.625rem;
+  color: $clr-dark;
+}
+h3 {
+  font-size: 1.125rem;
+}
+p {
+  font-size: 1rem;
+}
+.small-text {
+  font-size: 0.875rem;
+}

@@ -1,0 +1,11 @@
+@mixin for-tablate() {
+  @media (max-width: 900px) {
+    @content;
+  }
+}
+
+@mixin for-mobile() {
+  @media (max-width: 480px) {
+    @content;
+  }
+}
