@@ -726,5 +726,6 @@ p {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 5px;
+  cursor: pointer;
 }
 /*# sourceMappingURL=styles.css.map */
